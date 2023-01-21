@@ -1,6 +1,7 @@
 import React ,{useRef, useState} from 'react'
+import Reelsidebar from './Reelsidebar';
 import Reelfooter from './Reelfooter';
-import vdo from 'D:/codeputs/Clones/instagram-clone/src/assets/2916298792394031223.mp4'
+import vdo from 'D:/codeputs/Clones/instagram-clone/src/assets/2990726203617069730.mp4'
 
 function Reelcard() {
   const [playing,setPlaying] = useState(false);
@@ -18,12 +19,18 @@ function Reelcard() {
   }
 
   return (
+    <>
+    
     <div className='w-full max-h-full   relative snap-start border-none  bg-white object-fill' >
       <video src={vdo} loop
       ref={videoRef}
       onClick={onVideoPress}/>
-      <Reelfooter/>
+      <Reelfooter username="jerryd" music="leo ft.honey x cozy" />
+      
+      <Reelsidebar/>
     </div>
+    
+    </>
   )
 }
 
