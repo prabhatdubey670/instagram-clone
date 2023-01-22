@@ -1,9 +1,11 @@
 import React ,{useRef, useState} from 'react'
 import Reelsidebar from './Reelsidebar';
 import Reelfooter from './Reelfooter';
-import vdo from 'D:/codeputs/Clones/instagram-clone/src/assets/2990726203617069730.mp4'
 
-function Reelcard() {
+
+function Reelcard({
+  url,username,caption,music,likes,comments,shares
+}) {
   const [playing,setPlaying] = useState(false);
   const videoRef = useRef(null);
   const onVideoPress =()=>{
@@ -22,14 +24,15 @@ function Reelcard() {
     <>
     
     <div className='w-full max-h-full   relative snap-start border-none  bg-white object-fill' >
-      <video src={vdo} loop
+      <video src={url} loop
       ref={videoRef}
       onClick={onVideoPress}/>
-      <Reelfooter username="jerryd" music="leo ft.honey x cozy" />
+      <Reelfooter username={username} music={music} caption={caption
+      } />
       
-      <Reelsidebar/>
+      <Reelsidebar likes={likes} comments={comments} shares={shares}/>
     </div>
-    
+
     </>
   )
 }
