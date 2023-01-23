@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import Reelcard from "./subcomp/Reelcard";
 // import vdo from "C:/Users/dprab/Desktop/codeputs lap/Javascript/instagram-clone/src/assets/2990726203617069730.mp4";
-import db from "C:/Users/dprab/Desktop/codeputs lap/Javascript/instagram-clone/firebase.js";
+import db from "D:/codeputs/Clones/instagram-clone/firebase.js";
 function Reelslist() {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
