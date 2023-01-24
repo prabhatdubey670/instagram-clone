@@ -2,14 +2,21 @@ import React, { useState, useEffect } from "react";
 import Reelcard from "./subcomp/Reelcard";
 // import vdo from "C:/Users/dprab/Desktop/codeputs lap/Javascript/instagram-clone/src/assets/2990726203617069730.mp4";
 import db from "D:/codeputs/Clones/instagram-clone/firebase.js";
+import { getFirestore, collection, getDocs } from 'firebase/firestore'
 function Reelslist() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    db.collection("01").onSnapshot((snapshot) =>
-      setVideos(snapshot.docs.map((doc) => doc.data()))
-    );
+    const getVideos = async () => {
+      const db = getFirestore();
+      const querySnapshot = await getDocs(collection(db, "01"));
+      querySnapshot.forEach((doc) => {
+        setVideos((prev) => [...prev, doc.data()]);
+      });
+    };
+    getVideos();
   }, []);
+
   
   return (
     <center>

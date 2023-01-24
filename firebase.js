@@ -1,6 +1,5 @@
 import {initializeApp} from 'firebase/app';
-import { getFirestore } from "firebase/firestore";
-import { collection, getDocs } from "firebase/firestore"; 
+import { getFirestore, collection, getDocs } from 'firebase/firestore'
 
 
 const firebaseConfig = {
@@ -11,15 +10,14 @@ const firebaseConfig = {
   messagingSenderId: "790015462535",
   appId: "1:790015462535:web:e04f90e70e79aca4887c22",
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-const querySnapshot = await getDocs(collection(db, "01"));
+// const querySnapshot = await getDocs(collection(db, "01"));
 
-querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
-});
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
 
 export default db;
