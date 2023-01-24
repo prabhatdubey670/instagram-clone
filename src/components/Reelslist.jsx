@@ -1,12 +1,16 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Reelcard from "./subcomp/Reelcard";
 // import vdo from "C:/Users/dprab/Desktop/codeputs lap/Javascript/instagram-clone/src/assets/2990726203617069730.mp4";
 import db from "D:/codeputs/Clones/instagram-clone/firebase.js";
 function Reelslist() {
   const [videos, setVideos] = useState([]);
+
   useEffect(() => {
-    db.collection('01').onSnapshot(snapshot => (setVideos(snapshot.docs.map(doc => doc.data()))))
-  },[])
+    db.collection("01").onSnapshot((snapshot) =>
+      setVideos(snapshot.docs.map((doc) => doc.data()))
+    );
+  }, []);
+  
   return (
     <center>
       <div
@@ -15,14 +19,17 @@ function Reelslist() {
       >
         {videos.map(
           ({ url, username, caption, music, likes, comments, shares }) => (
-            <Reelcard 
-            username={username} music={music} caption={caption
-            } likes={likes} comments={comments} shares={shares} url={url}
+            <Reelcard
+              username={username}
+              music={music}
+              caption={caption}
+              likes={likes}
+              comments={comments}
+              shares={shares}
+              url={url}
             />
           )
         )}
-
-      
       </div>
     </center>
   );
