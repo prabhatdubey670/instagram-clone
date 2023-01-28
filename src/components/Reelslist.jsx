@@ -22,7 +22,7 @@ function Reelslist() {
     <center>
       <div
         id="reelsvideos"
-        className="snap-mandatory snap-y scroll-smooth  md:h-[588px] top-12 left-[40%]  overflow-scroll max-w-xl md:w-[306px] absolute rounded-md"
+        className="snap-mandatory snap-y scroll-smooth  md:h-[85%] top-12 left-[43%]  overflow-scroll max-w-xl md:w-[306px] absolute rounded-md"
       >
         {videos.map(
           ({ url, username, caption, music, likes, comments, shares }) => (
