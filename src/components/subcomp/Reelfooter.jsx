@@ -4,10 +4,10 @@ import {BiMusic} from 'react-icons/bi'
 function Reelfooter({username,caption,music}) {
   return (
     <div id="reelfooter" className='relative bottom-[77px] px-2 bg-transparent text-white flex flex-col'>
-      <h3 className='absolute left-3
-       bg-transparent'>@{username}</h3>
+      <h3 className='absolute left-3 -bottom-3
+       bg-transparent text-base '>@{username}</h3>
       <p className='text-sm
-      absolute left-3 -bottom-[44px] bg-transparent'>{caption} </p>
+      absolute left-[14px] -bottom-[38px] bg-transparent'>{caption} </p>
       <BiMusic className='absolute left-3 -bottom-16 bg-transparent font-bold z-50'/>
        <motion.p
         initial={{ x: -330,opacity:1 }}  animate={{ x: 270,opacity:1 }} transition={{ repeat: Infinity,type:"keyframes", duration: 25,delay:-10, repeatType:'loop' }}
