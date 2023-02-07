@@ -1,5 +1,7 @@
 import './App.css'
-// import Login from './components/Login'
+// import Explore from './components/Explore'
+import Mobilenav from './components/Mobilenav'
+
 import Reelslist from './components/Reelslist'
 import Sidenav from './components/Sidenav'
 
@@ -10,7 +12,9 @@ function App() {
    <><div className='h-[100vh] bg-white grid place-items-center-center'>
     <Sidenav/>
     <Reelslist/>
+    <Mobilenav/>
     {/* <Login/> */}
+    {/* <Explore/> */}
     </div>
    </>
   )

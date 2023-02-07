@@ -9,7 +9,7 @@ import {
 } from "react-icons/md";
 export default function Sidenav() {
   return (
-    <div className="absolute w-[245px] h-screen bg-white border-2 border-gray-50 shadow-lg">
+    <div className="absolute w-[245px] h-screen bg-white border-2 border-gray-50 shadow-lg md:visible invisible">
       <img src={ig_logo} alt="img" className="absolute w-32 h-9 top-7 left-5" />
 
       <nav className="absolute top-32 left-6 space-y-12">

@@ -1,6 +1,6 @@
 import {initializeApp} from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
-
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAnoUayhOQOSsn5DGroLmShYQkchLH5qw0",
@@ -14,10 +14,8 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-// const querySnapshot = await getDocs(collection(db, "01"));
+const storage = getStorage(app);
+export default {db, storage};
 
-// querySnapshot.forEach((doc) => {
-//   console.log(`${doc.id} => ${doc.data()}`);
-// });
 
-export default db;
+// export default db;

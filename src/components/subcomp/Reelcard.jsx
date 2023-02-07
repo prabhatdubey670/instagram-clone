@@ -23,11 +23,11 @@ function Reelcard({
   return (
     <>
     
-    <div className='w-full h-full   relative snap-start border-none  bg-white object-fill' >
+    <div className='md:w-full md:h-full snap-y overflow-hidden md:relative md:snap-start md:border-none  md:bg-white md:object-fill top-[50px] relative' >
       <video src={url} loop
       ref={videoRef}
       onClick={onVideoPress}
-      key={url}/>
+      key={url} className=""/>
       <Reelfooter username={username} music={music} caption={caption
       } />
       
