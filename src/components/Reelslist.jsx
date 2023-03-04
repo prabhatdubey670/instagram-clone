@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Reelcard from "./subcomp/Reelcard";
 import vdo from "D:/codeputs/Clones/instagram-clone/src/assets/2993020039879586992.mp4";
 import db from "D:/codeputs/Clones/instagram-clone/firebase.js";
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 function Reelslist() {
   const [videos, setVideos] = useState([]);
 
@@ -17,7 +17,6 @@ function Reelslist() {
     getVideos();
   }, []);
 
-  
   return (
     <center>
       <div
@@ -34,7 +33,6 @@ function Reelslist() {
               comments={comments}
               shares={shares}
               url={vdo}
-            
             />
           )
         )}

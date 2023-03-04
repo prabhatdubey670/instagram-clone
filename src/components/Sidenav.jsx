@@ -1,16 +1,17 @@
-import React from "react";
-import ig_logo from "D:/codeputs/Clones/instagram-clone/src/assets/Instagram_Logo_2016.svg";
+import React from 'react';
 import {
   MdOutlineHome,
   MdOutlineVideoLibrary,
   MdOutlineAddBox,
   MdAccountCircle,
   MdMenu,
-} from "react-icons/md";
+} from 'react-icons/md';
+import igLogo from '../assets/Instagram_Logo_2016.svg';
+
 export default function Sidenav() {
   return (
     <div className="absolute w-[245px] h-screen bg-white border-2 border-gray-50 shadow-lg md:visible invisible">
-      <img src={ig_logo} alt="img" className="absolute w-32 h-9 top-7 left-5" />
+      <img src={igLogo} alt="img" className="absolute w-32 h-9 top-7 left-5" />
 
       <nav className="absolute top-32 left-6 space-y-12">
         <div className="cursor-pointer">

@@ -1,6 +1,6 @@
-import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { MdLibraryMusic } from "react-icons/md";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { MdLibraryMusic } from 'react-icons/md';
 
 function Reelfooter({ username, caption, music }) {
   return (
@@ -12,14 +12,14 @@ function Reelfooter({ username, caption, music }) {
         className="absolute left-3 -bottom-3
        bg-transparent md:text-base text-xl "
       >
-        @{username}
+        {username}
       </h3>
 
       <p
         className="md:text-sm
       absolute text-base left-[14px] md:-bottom-[38px] -bottom-[44px] bg-transparent"
       >
-        {caption}{" "}
+        {caption}
       </p>
       <MdLibraryMusic className="absolute left-3 md:-bottom-16 -bottom-20 bg-transparent font-bold z-50 opacity-70 md:text-base text-2xl" />
       <motion.p
@@ -27,10 +27,10 @@ function Reelfooter({ username, caption, music }) {
         animate={{ x: 100, opacity: 1 }}
         transition={{
           repeat: Infinity,
-          type: "keyframes",
+          type: 'keyframes',
           duration: 10,
           delay: -10,
-          repeatType: "loop",
+          repeatType: 'loop',
         }}
         className="absolute -bottom-16 bg-transparent right-3 font-extralight text-sm overflow-x-hidden"
       >
