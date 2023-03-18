@@ -14,3 +14,15 @@
         background-color: rgb(255, 255, 255);
     }
 }
+/* #mticker{
+    animation: moving 2s linear infinite;
+    transform: translateX(100%);
+    @keyframes moving {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+} */

@@ -2,7 +2,15 @@ import React, { useRef, useState } from 'react';
 import Reelsidebar from './Reelsidebar';
 import Reelfooter from './Reelfooter';
 
-function Reelcard({ url, username, caption, music, likes, comments, shares }) {
+function Reelcard({
+  url,
+  username,
+  caption,
+  music,
+  likes,
+  comments,
+  shares,
+}) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
   const onVideoPress = () => {
@@ -22,7 +30,7 @@ function Reelcard({ url, username, caption, music, likes, comments, shares }) {
         loop
         ref={videoRef}
         onClick={onVideoPress}
-        key={url}
+        key={8}
         className=""
       />
       <Reelfooter username={username} music={music} caption={caption} />
