@@ -25,9 +25,7 @@ function Reelslist() {
         className="snap-mandatory snap-y scroll-smooth  md:h-[85%] md:top-12 md:left-[41%]  overflow-scroll max-w-xl md:w-[306px] absolute rounded-md "
       >
         {videos.map(
-          ({
-            url,username, caption, music, likes, comments, shares,
-          }) => (
+          ({ url, username, caption, music, likes, comments, shares }) => (
             <Reelcard
               username={username}
               music={music}
@@ -37,7 +35,7 @@ function Reelslist() {
               shares={shares}
               url={vdo}
             />
-          ),
+          )
         )}
       </div>
     </center>
